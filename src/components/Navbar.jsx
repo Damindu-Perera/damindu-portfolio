@@ -18,7 +18,7 @@ const navLinks = [
 ];
 
 const socialLinks = {
-  github: "https://github.com/daminduperera0614",
+  github: "https://github.com/Damindu-Perera",
   linkedin: "https://linkedin.com/in/damindu-perera-060baa25b",
   email: "damindup14@gmail.com",
 };

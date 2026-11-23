@@ -26,7 +26,7 @@ const contactDetails = [
     icon: Github,
     label: "GITHUB",
     value: "Explore my projects",
-    href: "https://github.com/daminduperera0614",
+    href: "https://github.com/Damindu-Perera",
   },
 ];
 

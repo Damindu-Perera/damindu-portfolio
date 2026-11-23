@@ -121,7 +121,7 @@ export default function Hero() {
         {/* Social links */}
         <div className="mt-12 flex justify-center gap-8">
           <a
-            href="https://github.com/"
+            href="https://github.com/Damindu-Perera"
             target="_blank"
             rel="noreferrer"
             className="flex items-center gap-2 text-sm text-gray-500 transition hover:text-neon"
