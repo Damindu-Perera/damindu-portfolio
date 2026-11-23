@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --color-neon: #35e6a4;
+  --color-neon-dark: #0b6044;
+  --color-background: #020605;
+  --color-card: #07110d;
+  --color-muted: #9ba9a5;
+
+  --font-mono: "JetBrains Mono", monospace;
+  --font-display: "Space Grotesk", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+body {
+  background: #020605;
+  color: #f0f5f3;
+  font-family: "Space Grotesk", sans-serif;
+  margin: 0;
+  min-width: 320px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  background: #35e6a4;
+  color: #001b12;
+}
+
+/* Background grid */
+.grid-background {
+  background-image:
+    linear-gradient(rgba(53, 230, 164, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(53, 230, 164, 0.05) 1px, transparent 1px);
+  background-size: 45px 45px;
+}
+
+/* Glow effects */
+.green-glow {
+  box-shadow: 0 0 30px rgba(53, 230, 164, 0.15);
+}
+
+.text-glow {
+  text-shadow: 0 0 25px rgba(53, 230, 164, 0.2);
+}
+
+/* Pulse */
+@keyframes pulse-glow {
+  0%,
+  100% {
+    opacity: 1;
+    box-shadow: 0 0 8px #35e6a4;
+  }
+
+  50% {
+    opacity: 0.4;
+    box-shadow: 0 0 2px #35e6a4;
+  }
+}
+
+/* Floating */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+/* Rotation */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Fade up */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Reveal */
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animation classes */
+.animate-pulse-glow {
+  animation: pulse-glow 2s infinite;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-spin-slow {
+  animation: spin-slow 30s linear infinite;
+}
+
+.animate-fade-up {
+  animation: fade-up 0.8s ease-out both;
+}
+
+.animate-reveal {
+  animation: reveal 0.7s ease-out both;
+}
+
+/* Animation delays */
+.delay-100 {
+  animation-delay: 100ms;
+}
+
+.delay-200 {
+  animation-delay: 200ms;
+}
+
+.delay-300 {
+  animation-delay: 300ms;
+}
+
+.delay-400 {
+  animation-delay: 400ms;
+}
+
+/* Better scrolling */
+section {
+  scroll-margin-top: 90px;
+}
+
+/* Accessibility: reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
