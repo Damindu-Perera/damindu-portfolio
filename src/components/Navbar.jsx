@@ -1,12 +1,6 @@
 import { useState } from "react";
-import {
-  Github,
-  Linkedin,
-  Mail,
-  Menu,
-  X,
-  ArrowUpRight,
-} from "lucide-react";
+import { Mail, Menu, X, ArrowUpRight } from "lucide-react";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 const navLinks = [
   { name: "About", href: "#about" },
@@ -70,7 +64,7 @@ export default function Navbar() {
             aria-label="GitHub"
             className="text-gray-400 transition-all hover:-translate-y-1 hover:text-neon"
           >
-            <Github size={18} />
+            <FaGithub size={18} />
           </a>
 
           <a
@@ -80,7 +74,7 @@ export default function Navbar() {
             aria-label="LinkedIn"
             className="text-gray-400 transition-all hover:-translate-y-1 hover:text-neon"
           >
-            <Linkedin size={18} />
+            <FaLinkedin size={18} />
           </a>
 
           <a
@@ -139,7 +133,7 @@ export default function Navbar() {
                 aria-label="GitHub"
                 className="text-gray-400 transition-colors hover:text-neon"
               >
-                <Github size={20} />
+                <FaGithub size={20} />
               </a>
 
               <a
@@ -149,7 +143,7 @@ export default function Navbar() {
                 aria-label="LinkedIn"
                 className="text-gray-400 transition-colors hover:text-neon"
               >
-                <Linkedin size={20} />
+                <FaLinkedin size={20} />
               </a>
 
               <a

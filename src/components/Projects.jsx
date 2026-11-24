@@ -4,12 +4,13 @@ import {
 } from "../data/projects";
 
 import {
-  Github,
   ExternalLink,
   ArrowUpRight,
   GraduationCap,
   Rocket,
 } from "lucide-react";
+
+import { FaGithub } from "react-icons/fa";
 
 function ProjectCard({ project }) {
   return (
@@ -17,7 +18,6 @@ function ProjectCard({ project }) {
 
       {/* Project image */}
       <div className="relative aspect-[16/9] overflow-hidden bg-gradient-to-br from-[#0b2419] via-[#07110d] to-[#020605]">
-
         <img
           src={project.image}
           alt={project.title}
@@ -44,7 +44,6 @@ function ProjectCard({ project }) {
 
       {/* Content */}
       <div className="p-6 md:p-8">
-
         <div className="mb-4 flex items-start justify-between gap-4">
           <h3 className="text-2xl font-bold text-white transition group-hover:text-neon">
             {project.title}
@@ -74,7 +73,6 @@ function ProjectCard({ project }) {
 
         {/* Project links */}
         <div className="flex flex-wrap items-center gap-5 border-t border-white/5 pt-5">
-
           {project.github && (
             <a
               href={project.github}
@@ -82,7 +80,7 @@ function ProjectCard({ project }) {
               rel="noreferrer"
               className="inline-flex items-center gap-2 text-sm text-gray-400 transition hover:text-neon"
             >
-              <Github size={17} />
+              <FaGithub size={17} />
               Source Code
             </a>
           )}
@@ -98,7 +96,6 @@ function ProjectCard({ project }) {
               Live Demo
             </a>
           )}
-
         </div>
       </div>
     </article>
@@ -108,10 +105,8 @@ function ProjectCard({ project }) {
 function ProjectGroup({ title, subtitle, icon: Icon, projects, number }) {
   return (
     <div className="mb-20 last:mb-0">
-
       {/* Group heading */}
       <div className="mb-8 flex flex-col gap-4 border-b border-white/5 pb-6 sm:flex-row sm:items-center sm:justify-between">
-
         <div className="flex items-center gap-4">
           <div className="flex h-14 w-14 items-center justify-center rounded-xl border border-neon/20 bg-neon/5">
             <Icon size={26} className="text-neon" />
@@ -159,7 +154,6 @@ export default function Projects() {
       <div className="grid-background pointer-events-none absolute inset-0 opacity-30" />
 
       <div className="relative mx-auto max-w-7xl">
-
         {/* Main heading */}
         <div className="mb-20">
           <p className="mb-4 font-mono text-sm tracking-[0.25em] text-neon">
@@ -204,16 +198,16 @@ export default function Projects() {
           </p>
 
           <a
-            href="https://github.com/"
+            href="https://github.com/Damindu-Perera"
             target="_blank"
             rel="noreferrer"
             className="inline-flex items-center gap-2 text-sm text-neon transition hover:text-white"
           >
             Explore my GitHub
+            <FaGithub size={16} />
             <ArrowUpRight size={16} />
           </a>
         </div>
-
       </div>
     </section>
   );

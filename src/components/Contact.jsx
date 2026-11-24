@@ -1,13 +1,13 @@
 import {
   Mail,
-  Github,
-  Linkedin,
   ArrowUpRight,
   Download,
   Send,
   MapPin,
   CheckCircle2,
 } from "lucide-react";
+
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 const contactDetails = [
   {
@@ -17,13 +17,13 @@ const contactDetails = [
     href: "mailto:damindup14@gmail.com",
   },
   {
-    icon: Linkedin,
+    icon: FaLinkedin,
     label: "LINKEDIN",
     value: "Connect with me",
     href: "https://linkedin.com/in/damindu-perera-060baa25b",
   },
   {
-    icon: Github,
+    icon: FaGithub,
     label: "GITHUB",
     value: "Explore my projects",
     href: "https://github.com/Damindu-Perera",
@@ -40,7 +40,7 @@ export default function Contact() {
     const subject = formData.get("subject");
     const message = formData.get("message");
 
-    const mailtoLink = `mailto:YOUR_EMAIL@example.com?subject=${encodeURIComponent(
+    const mailtoLink = `mailto:damindup14@gmail.com?subject=${encodeURIComponent(
       subject
     )}&body=${encodeURIComponent(
       `Name: ${name}\nEmail: ${email}\n\n${message}`

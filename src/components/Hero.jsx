@@ -1,10 +1,5 @@
-import {
-  ArrowRight,
-  Github,
-  Linkedin,
-  Cog,
-  Code2,
-} from "lucide-react";
+import { ArrowRight, Cog, Code2 } from "lucide-react";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 export default function Hero() {
   return (
@@ -51,7 +46,6 @@ export default function Hero() {
 
       {/* Main content */}
       <div className="relative z-10 mx-auto w-full max-w-6xl px-6 pt-28 text-center md:px-12">
-
         {/* Status */}
         <div className="mb-8 inline-flex items-center gap-3 rounded-full border border-neon/20 bg-neon/5 px-4 py-2 font-mono text-[10px] tracking-[0.2em] text-neon md:text-xs">
           <span className="animate-pulse-glow h-2 w-2 rounded-full bg-neon" />
@@ -61,9 +55,7 @@ export default function Hero() {
         {/* Heading */}
         <h1 className="font-mono text-5xl font-bold tracking-tight md:text-7xl lg:text-8xl">
           DAMINDU
-          <span className="text-glow ml-3 text-neon">
-            DEV
-          </span>
+          <span className="text-glow ml-3 text-neon">DEV</span>
         </h1>
 
         {/* Subtitle */}
@@ -73,8 +65,8 @@ export default function Hero() {
 
         {/* Description */}
         <p className="mx-auto mt-6 max-w-2xl font-mono text-sm leading-8 text-gray-400 md:text-base">
-          Building modern web applications, exploring AI,
-          and transforming ideas into meaningful digital experiences.
+          Building modern web applications, exploring AI, and transforming ideas
+          into meaningful digital experiences.
         </p>
 
         {/* Technology badges */}
@@ -91,7 +83,6 @@ export default function Hero() {
 
         {/* Buttons */}
         <div className="mt-12 flex flex-col justify-center gap-4 sm:flex-row">
-
           <a
             href="#projects"
             className="group inline-flex items-center justify-center gap-3 rounded-md bg-neon px-7 py-4 font-mono text-sm font-bold text-[#001b12] shadow-[0_0_25px_#35e6a422] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_35px_#35e6a444]"
@@ -115,7 +106,6 @@ export default function Hero() {
               className="transition-transform group-hover:translate-x-1"
             />
           </a>
-
         </div>
 
         {/* Social links */}
@@ -123,24 +113,23 @@ export default function Hero() {
           <a
             href="https://github.com/Damindu-Perera"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             className="flex items-center gap-2 text-sm text-gray-500 transition hover:text-neon"
           >
-            <Github size={18} />
+            <FaGithub size={18} />
             GitHub
           </a>
 
           <a
-            href="https://linkedin.com/"
+            href="https://linkedin.com/in/damindu-perera-060baa25b"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             className="flex items-center gap-2 text-sm text-gray-500 transition hover:text-neon"
           >
-            <Linkedin size={18} />
+            <FaLinkedin size={18} />
             LinkedIn
           </a>
         </div>
-
       </div>
     </section>
   );

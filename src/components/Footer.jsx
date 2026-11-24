@@ -1,7 +1,8 @@
-import { Github, Linkedin, Mail, ArrowUp } from "lucide-react";
+import { Mail, ArrowUp } from "lucide-react";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 const socialLinks = {
-  github: "https://github.com/daminduperera0614",
+  github: "https://github.com/Damindu-Perera",
   linkedin: "https://linkedin.com/in/damindu-perera-060baa25b",
   email: "damindup14@gmail.com",
 };
@@ -28,6 +29,7 @@ export default function Footer() {
 
         {/* Social links */}
         <div className="flex items-center gap-5">
+          {/* GitHub */}
           <a
             href={socialLinks.github}
             target="_blank"
@@ -35,9 +37,10 @@ export default function Footer() {
             aria-label="GitHub"
             className="text-gray-500 transition-colors hover:text-neon"
           >
-            <Github size={18} />
+            <FaGithub size={18} />
           </a>
 
+          {/* LinkedIn */}
           <a
             href={socialLinks.linkedin}
             target="_blank"
@@ -45,9 +48,10 @@ export default function Footer() {
             aria-label="LinkedIn"
             className="text-gray-500 transition-colors hover:text-neon"
           >
-            <Linkedin size={18} />
+            <FaLinkedin size={18} />
           </a>
 
+          {/* Email */}
           <a
             href={`mailto:${socialLinks.email}`}
             aria-label="Email"
