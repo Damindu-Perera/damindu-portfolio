@@ -45,4 +45,24 @@ export const personalProjects = [
     github: "https://github.com/yourusername/Crochet_Haven",
     demo: "",
   },
+
+  {
+    id: "gesture-control-studio",
+    title: "Gesture Control Studio",
+    category: "Computer Vision",
+    description:
+        "A computer vision application that detects hand gestures in real time and uses them to enable gesture-based interaction. Built with Python, OpenCV, and MediaPipe for hand tracking and gesture recognition.",
+    image: "/projects/gesture-control-studio.png",
+    technologies: [
+        "Python",
+        "OpenCV",
+        "MediaPipe",
+        "Computer Vision",
+        "Real-Time Processing",
+    ],
+    github: "https://github.com/Damindu-Perera/Gesture-Control-Studio",
+    demo: "",
+  },
+
+  
 ];
